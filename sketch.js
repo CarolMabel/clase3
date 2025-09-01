@@ -284,9 +284,10 @@ function draw() {
     translate(0, -valor / 4, -valor / 7);
     sphere(valor / 4);
     pop();
-    push();
-    fill("blue");
-    sphere(valor / 5);
+      push();
+    fill("red");
+    translate(0, -valor / 4, -valor / 7);
+    torus(valor / 4);
     pop();
 }
 
