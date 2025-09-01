@@ -1,3 +1,26 @@
+const trabajitos = [
+    {
+        photo: "https://github.com/CarolMabel/clase3/blob/main/img/GuerraDePoder.webp?raw=true/",
+        title: "Guerra de poder",
+        description: "Trabajo de Proyecto I, con Prof. Ron."
+    },
+    {
+        photo: "https://github.com/CarolMabel/clase3/blob/main/img/FantasiaOnirica.webp?raw=true",
+        title: "Fantasía Onírica",
+        description: "Trabajo de Representación Conceptual, con Prof. Mallea."
+    },
+    {
+        photo: "https://github.com/CarolMabel/clase3/blob/main/img/Betrayal.webp?raw=true",
+        title: "Betrayal",
+        description: "Trabajo de Representación Conceptual, con Prof. Mallea."
+    },
+    {
+        photo: "https://github.com/CarolMabel/clase3/blob/main/img/AnOpenLetter.webp?raw=true",
+        title: "An Open Letter",
+        description: "Trabajo de Proyecto III, con Prof. Petruska."
+    }            
+]
+
 const datos = [
     {
         id: 1,
@@ -204,13 +227,12 @@ const datos = [
     },
 ];
 
-
 var yo;
 var otrxs = [];
 
 
 datos.forEach((x) => {
-    if (x.nombre == "Martina Urzúa") {
+    if (x.nombre == "Carol Álvarez") {
         yo = x;
     } else {
         otrxs.push(x);
@@ -236,7 +258,14 @@ function setup() {
     //Lo que sigue es JavaScript a secas
     otrxs.forEach((x)=>{
         document.querySelector("#otredad").innerHTML += `<div><a href="${x.cuenta}"><img src="${x.foto}" title="${x.esperado}"></a></div>`;
-    })
+    });
+ //Copy-paste, y arreglín
+    trabajitos.forEach((x)=>{
+        document.querySelector("#portafolio").innerHTML += `<div><img src="${x.photo}"><p>${x.title}</p></div>`;
+    });
+    
+    document.querySelector("#autoria").innerHTML = yo.nombre;
+    
     //Ahora vuelvo al p5.js
     noStroke();
 }
